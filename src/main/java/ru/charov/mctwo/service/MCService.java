@@ -1,6 +1,5 @@
 package ru.charov.mctwo.service;
 
-import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -18,8 +17,6 @@ import java.time.LocalDateTime;
 public class MCService {
 
     private final KafkaTemplate<String, Message> kafkaTemplate;
-
-    private final Gson mapper;
 
     public void send(Message msg) {
         msg.setMC2_timestamp(LocalDateTime.now());
