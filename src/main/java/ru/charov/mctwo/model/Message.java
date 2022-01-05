@@ -20,7 +20,6 @@ public class Message {
 
     private LocalDateTime MC1_timestamp;
 
-    @Setter
     private LocalDateTime MC2_timestamp;
 
     private LocalDateTime MC3_timestamp;

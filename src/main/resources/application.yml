@@ -10,7 +10,9 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: ru.charov.mctwo.kafka.GsonSerializer
   mvc:
     converters:
       preferred-json-mapper: gson
+  gson:
+    date-format: "yyyy-MM-dd HH:mm:ss.SSS"
