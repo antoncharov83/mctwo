@@ -4,5 +4,5 @@ WORKDIR /home/gradle/src
 RUN gradle build --no-daemon
 FROM amazoncorretto:11-alpine-jdk
 MAINTAINER charov
-COPY --from=build /home/gradle/src/build/libs/*.jar /mctwo-1.0.0.jar
+COPY --from=build /home/gradle/src/build/libs/mctwo-0.0.1-SNAPSHOT.jar /mctwo-1.0.0.jar
 ENTRYPOINT ["java","-jar","/mctwo-1.0.0.jar"]
